@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Публикации
+{% endblock %}
+
+{% block body %}
+<div class="container">
+<!--    <h1> Публикации </h1>-->
+    {% if cards|length > 0 %}
+    <div class="row row-cols-3">
+        {% for el in cards %}
+            <div class="col">
+                <a style="display:block" href="/content/{{ el.id }}">
+<!--                    <div class="alert alert-info">-->
+                        <img src="/static/{{ el.file }}" width="400" height="400" alt="Альтернативный текст"><br><br>
+<!--                    </div>-->
+                </a>
+            </div>
+
+        {% endfor %}
+    </div>
+    {% else %}
+    <p>Пока что нет публикаций :(</p>
+    {% endif %}
+</div>
+{% endblock %}

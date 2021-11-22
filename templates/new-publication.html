@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Новая публикация
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1> Новая публикация </h1>
+    <form method="post">
+        <input type="text" name="input_file" id="input_file" class="form-control" placeholder="Введите относительный путь до файла"><br>
+        <textarea name="input_desc" id="input_desc" class="form-control" placeholder="Введите описание"></textarea><br>
+        <input type="text" name="input_place" id="input_place" class="form-control" placeholder="Отметьте место"><br>
+        <input type="submit" class="btn btn-success" value="Опубликовать">
+    </form>
+</div>
+{% endblock %}

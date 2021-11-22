@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ card.id }}
+{% endblock %}
+
+{% block body %}
+<div class="container">
+<!--    <h1> {{ card.id }} </h1>-->
+    <div class="alert alert-info">
+        <h2>{{ card.file }}</h2>
+<!--        {{ content }}-->
+        <img src="/static/{{ card.file }}" width="800" hspace="20" alt="Альтернативный текст"><br><br>
+        <p>{{ card.description }}</p>
+        <p><b>Дата создания: {{ card.date.date() }}</b></p>
+        <a href="/content/{{ card.id }}/delete" class="btn btn-danger">Удалить</a>
+<!--        <a href="/travels/{{ card.id }}/update" class="btn btn-success">Редактировать</a>-->
+    </div>
+</div>
+{% endblock %}
